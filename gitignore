@@ -1,0 +1,12 @@
+# put here the file types you don't want to track 
+#
+*.aux
+*.log
+*.toc
+*.bbl
+*.blg
+*.dvi
+*.pdf
+*.out
+*.swp
+*.synctex.gz

@@ -1,0 +1,14 @@
+OUTPUT_DIR=output
+
+.PHONY: dissertation.dvi run clean
+
+dissertation.dvi::
+	latex --src -output-directory=$(OUTPUT_DIR) dissertation.tex
+	mv $(OUTPUT_DIR)/$@ $@
+	xdvi -editor "gvim --servername vimtex --remote" -unique $@
+
+run:
+	bibtex $(OUTPUT_DIR)/dissertation
+
+clean:
+	rm -f dissertation.dvi $(OUTPUT_DIR)/*
