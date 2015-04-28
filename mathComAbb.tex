@@ -9,15 +9,8 @@
 \DeclareMathOperator{\trace}{tr}
 \DeclareMathOperator{\image}{im}
 \DeclareMathOperator{\re}{Re}
-
-
-
-%%environments
-\newcommand{\beq}[1]{\begin{equation}\label{#1}}% equation with labeling
-\newcommand{\eeq}{\end{equation}} 
-
-\providecommand{\besu}{\begin{subequations}}
-\providecommand{\esu}{\end{subequations}}
+\DeclareMathOperator{\trps}{T}
+\def\trsp{^{\trps}}
 
 %% mathsymbols
 \providecommand{\abs}[1]{\lvert#1\rvert}
@@ -29,11 +22,13 @@
 \providecommand{\esssup}{\mathop{\mathrm{ess\,sup}}\displaylimits}
 \providecommand{\partiell}[2]{\frac{\partial #1}{\partial #2}}
 \providecommand{\partielt}[1]{\frac{\partial #1}{\partial t}}
+\providecommand{\partieln}[1]{\frac{\partial #1}{\partial \nu}}
 \providecommand{\timed}[1]{\frac{d #1}{dt}}
 \providecommand{\into}[0]{\int_\Omega}
 \providecommand{\bbmat}{\begin{bmatrix}}
 \providecommand{\ebmat}{\end{bmatrix}}
 \providecommand{\avr}[1]{\bigl \langle #1 \bigr \rangle}
+\providecommand{\rrn}[1]{\mathbb R ^ {#1}}
 
 %%Spaces
 \providecommand{\Dzio}{\mathcal D _0 ^\infty (\Omega)}
@@ -43,81 +38,3 @@
 \providecommand{\hzoo}{H_0^1(\Omega)}
 \providecommand{\ltzt}[1]{L^2(0,T;#1)}
 \providecommand{\wzt}{\mathcal W (0,T)}
-
-%%symbols
-\providecommand{\bu}{\mathbf u}
-\providecommand{\bv}{\mathbf v}
-\providecommand{\bvi}{\mathbf v _ \infty}
-\providecommand{\bw}{\mathbf w}
-\providecommand{\vinf}{v_\infty}
-
-% for DQMOM
-\providecommand{\xia}{\xi_\alpha}
-\providecommand{\xias}{\xi_\alpha^*}
-\providecommand{\wia}{w_\alpha}
-\providecommand{\wias}{w_\alpha^*}
-\providecommand{\aia}{a_\alpha}
-\providecommand{\bia}{b_\alpha}
-\providecommand{\uia}{\langle u_i \rangle _\alpha}
-\providecommand{\zea}{\zeta_\alpha}
-\providecommand{\duba}[2]{\langle #1 \vert #2 \rangle}
-\providecommand{\wxid}[2]{(w^{#1},\xi^{#2})}
-\providecommand{\wxi}[1]{(w^{#1},\xi^{#1})}
-%%abbrev
-\providecommand{\pmo}{^{-1}}
-\providecommand{\ppo}[1]{^{#1}+1}
-
-%mschmidts
-\newcommand{\BN}{{\mathbb N}}			%natural numbers
-\newcommand{\BZ}{{\mathbb Z}}			%
-\newcommand{\BR}{{\mathbb R}}			%real numbers
-\newcommand{\BC}{{\mathbb C}}			%complex numbers
-\newcommand{\sL}{{\mathscr L}} 
-\newcommand{\sK}{{\mathscr K}} 
-\newcommand{\sC}{{\mathscr C}} 
-\newcommand{\sT}{{\mathscr T}} 
-%\newcommand{\scrS}{{\mathscr S}}
-\newcommand{\sP}{{\mathscr P}} 
-\newcommand{\SR}{{\mathcal R}}
-\newcommand{\scrS}{{\mathcal S}}
-%%%% signal spaces
-\newcommand{\SU}{{\mathcal U}}		
-\newcommand{\SY}{{\mathcal Y}}		
-\newcommand{\SZ}{{\mathcal Z}}
-\newcommand{\SV}{{\mathcal V}}
-\newcommand{\SW}{{\mathcal W}}
-\newcommand{\BG}{\mbox{$\mathbb G$}}
-\newcommand{\BF}{\mbox{$\mathbb F$}}		%input/output operator\\
-\newcommand{\BP}{\mbox{$\mathbb P$}}
-\newcommand{\BI}{\mbox{$\mathbb I$}}
-\newcommand{\Amat}{{\bf A}}
-\newcommand{\Bmat}{{\bf B}}
-\newcommand{\Cmat}{{\bf C}}
-\newcommand{\Dmat}{{\bf D}}
-\newcommand{\Emat}{{\bf E}}	
-\newcommand{\Fmat}{{\bf F}}
-\newcommand{\Gmat}{{\bf G}}
-\newcommand{\Hmat}{{\bf H}}
-\newcommand{\Imat}{{\bf I}}
-\newcommand{\Kmat}{{\bf K}}
-\newcommand{\Mmat}{{\bf M}}
-\newcommand{\Smat}{{\bf S}}	
-\newcommand{\Umat}{{\bf U}}
-\newcommand{\Vmat}{{\bf V}}		        
-\newcommand{\Wmat}{{\bf W}}		        
-\newcommand{\Ymat}{{\bf Y}}		        
-\newcommand{\Mmass}{{\bf M}}
-
-\newcommand{\dJ}{{\bar J}}
-\newcommand{\dU}{{\bar U}}	
-\newcommand{\hv}{{\bf h}}	
-\newcommand{\uv}{{\bf u}}
-\newcommand{\fv}{{\bf f}}
-
-\newcommand{\zv}{{\bf z}}
-\newcommand{\vv}{{\bf v}}
-\newcommand{\wv}{{\bf w}}
-\providecommand{\bv}{{\bf b}}
-\newcommand{\yv}{{\bf y}}
-\newcommand{\ev}{{\bf e}}
-\providecommand{\rrn}[1]{\mathbb R ^ {#1}}
