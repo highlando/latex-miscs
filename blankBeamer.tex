@@ -1,0 +1,115 @@
+\documentclass[%
+aspectratio=43 % the default if ommited
+%aspectratio=169 %switches the page layout to 16:9 format
+,table % required for colored tables (passes the table option to xcolor)
+]{beamer}
+
+
+% [short title] the short title of the presentation is ignored by the new theme.
+\title[<++>]{<++>}
+% subtitle
+\subtitle{<++>}
+% [short author] author of the presentation
+% short author is shown in the footline on each frame
+\author[Jan Heiland]{Jan Heiland} 
+% institute
+\institute{CSC}
+% date
+\date{\today}
+%\date{November 5, 2010}
+
+
+% beamertheme with options
+\mode<presentation>
+{
+  \usetheme[%
+  ,english            % change the language of logos and footline to english,
+                      % recommended
+  % The following add the corresponding group logo to the header. Note that the
+  % implementation does not check for multiple selections, but the standard only
+  % expects a single group to appear.
+  % ,ARB
+  % ,BPE
+   ,CSC
+  % ,MSD
+  % ,NDS
+  % ,PCF
+  % ,PSD
+  % ,PSE
+  % ,SCT
+  % Choice of the title page layout:
+   ,layoutone             % Layout with fancy graphics and color gradient
+  % ,layouttwo            % Layout with blueish box (the default)
+  % ,layoutthree          % Layout with fancy title graphics of choice
+                          % use \pgfdeclareimage{title}{} to define it as below.
+  ,groupnameinhead        % Adds the full group name to the logo in the header
+  %,hideaffiliationheader  % hides the word Affiliations: or Zugehörigkeiten: on
+                          % the title page
+  % ,ovgu                 % adds the OVGU Logo to the header if no group logo is
+                          % used. 
+  % ,noauthor             % switches off the display of the author's name in the
+                          % footline 
+  , titleinfoot           % show the short title in the footline
+  % ,navsymbols           % beamer navigation symbols are off by default and can
+                          % be activated using this option
+  % ,fulscreen            % try to display the PDF in fullscreen mode by default
+   ,singlepage            % try to display teh PDF in single page (rather than
+                          % continuous view) mode by default
+  % ,alertbold            % show alerted text in bold face (this option will
+                          % make \alert cause errors in math mode)
+  ]{mpi2015}            
+}
+
+%Partnerlogos for the titlepage:
+% \cooplogos{\includegraphics[height=.075\paperheight]{ovgulogo}}
+
+% Define the graphics used on the title page in layout 1 & 3:
+\pgfdeclareimage[width=.6\linewidth,height=.45\linewidth]{title}{MPI_outside.jpg}
+
+
+\begin{document}
+% title page
+\maketitle % use maketitle to make the title frame
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% content - example
+\section{<++>} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+ \frametitle{\secname}
+  Normal text. \structure{``structure''-highlighted text.} \alert{Alerted text.}
+  \begin{align*}
+    s o m e &= f o r m u l a\\
+     w i t h &=   a l i g n
+  \end{align*}
+\end{frame}
+
+\frame{
+\frametitle{Thank you!}
+\vfill ~ \vfill ~ \vfill ~ \vfill ~ \vfill
+\begin{center}
+	\begin{huge}
+		Thank you for your attention!\\[.1in]
+	\end{huge}
+	I am always open for discussion
+\end{center}
+\vfill ~ \vfill ~ \vfill
+\begin{flushright}
+	\begin{small}
+		%\texttt{
+		\href{mailto:heiland@mpi-magdeburg.mpg.de}{heiland@mpi-magdeburg.mpg.de}\\
+		\href{http://www.janheiland.de}{www.janheiland.de}\\
+		\href{http://www.github.com/highlando}{github.com/highlando}
+		%}
+		\end{small}
+\end{flushright}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
