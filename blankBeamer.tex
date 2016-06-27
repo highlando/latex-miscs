@@ -4,6 +4,8 @@ aspectratio=43 % the default if ommited
 ,table % required for colored tables (passes the table option to xcolor)
 ]{beamer}
 
+% \newenvironment{recap}{\begin{small}\color{mpibluefont!50}\begin{flushright}}{\end{flushright}\end{small}}
+
 
 % [short title] the short title of the presentation is ignored by the new theme.
 \title[<++>]{<++>}
@@ -70,6 +72,11 @@ aspectratio=43 % the default if ommited
 \begin{document}
 % title page
 \maketitle % use maketitle to make the title frame
+
+\begin{frame}
+    \frametitle{Outline}
+    \tableofcontents
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
