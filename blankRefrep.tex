@@ -12,10 +12,21 @@
 % \tikzexternalize[prefix=tikz/]
 \usepackage[bookmarks=true]{hyperref}
 
+\newenvironment{citeit}{\vspace{.3in}\begin{small}\itshape}{\end{small}\vspace{.05in}}
+
+\newcounter{myissuecntr}
+\newenvironment{myissue}{
+   \bigskip\noindent
+   \refstepcounter{myissuecntr}
+   \textsc{Issue} \themyissuecntr:
+   % \newline
+   }{\par\smallskip}
+\newcommand{\mscite}[1]{[M--#1]}
+
 % \input{mathComAbb} %uses mathcomabb.tex to define commands for symbols and notations 
 
 %opening
-\title{Referee Report on \emph{Stabilization and Best Actuator Location for the Navier-Stokes Equations}}
+\title{Referee Report on \emph{<++>}}
 % \author{Jan Heiland}
 
 \begin{document}
@@ -23,8 +34,10 @@
 % \input{mathEnv}
 
 \section{General Remarks}
+\section{Particular Issues}
+I will refer to item XX from the manuscript as \mscite{XX}.
 
-\bibliographystyle{plain}
-\bibliography{}
+% \bibliographystyle{plain}
+% \bibliography{}
 \end{document}
 
