@@ -1,0 +1,125 @@
+\documentclass[%
+aspectratio=43 % the default if ommited
+%aspectratio=169 %switches the page layout to 16:9 format
+,table % required for colored tables (passes the table option to xcolor)
+]{beamer}
+
+
+% [short title] the short title of the presentation is ignored by the new theme.
+\title[]{\texorpdfstring{TITLE}{TITLE}}
+% subtitle
+\subtitle{SUBTITLE}
+% [short author] author of the presentation
+% short author is shown in the footline on each frame
+\author[Jan Heiland, {\href{mailto:heiland@mpi-magdeburg.mpg.de}{heiland@mpi-magdeburg.mpg.de}}]{Jens Saak} 
+% institute
+\institute{CSC}
+% date
+\date{\today}
+%\date{November 5, 2010}
+
+
+% beamertheme with options
+\mode<presentation>
+{
+  \usetheme[%
+  ,english            % change the language of logos and footline to english,
+   ,CSC
+   ,layoutone             % Layout with fancy graphics and color gradient
+  % ,layouttwo            % Layout with blueish box (the default)
+  % ,layoutthree          % Layout with fancy title graphics of choice
+                          % use \pgfdeclareimage{title}{} to define it as below.
+  ,groupnameinhead        % Adds the full group name to the logo in the header
+  %,compacthead           % moves the subtitle below the frametitle in the head
+                          % instead of in the slide area
+  %,adjustframetitle      % automatically fit oversized frametitles horizontally
+  %,hideaffiliationheader % hides the word Affiliations: or Zugehörigkeiten: on
+                          % the title page
+  %,hidefundingheader     % hides the words "suppoted by" or "gefördert durch"
+                          % above the funding logos 
+  % ,serifmath             % switch to serif math if desired
+  % ,ovgu                 % adds the OVGU Logo to the header if no group logo is
+                          % used. 
+  % ,noauthor             % switches off the display of the author's name in the
+                          % footline 
+  , titleinfoot           % show the short title in the footline
+  , movepagenums          % make the footline more symmetric in layout
+  % , hidepagenums        % do not print page numbers in footline
+  % ,fullscreen           % try to display the PDF in fullscreen mode by default
+   ,singlepage            % try to display teh PDF in single page (rather than
+                          % continuous view) mode by default
+  % ,alertbold            % show alerted text in bold face (this option will
+                          % make \alert cause errors in math mode)
+  ]{mpi2015}            
+}
+
+
+% Partnerlogos for the titlepage: (comment for "none")
+%\cooplogos[white]{\ovgu}
+\cooplogos{\ovgu}
+
+
+% Defining the graphics used on the title page in layout 3 analogously is done by:
+\pgfdeclareimage[width=.6\linewidth,height=.45\linewidth]{title}{MPI_outside.jpg}
+
+
+\begin{document}
+% title page
+\maketitle % use maketitle to make the title frame
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% content - example
+\section{Some Text} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+ \frametitle{\secname}
+  Normal text. \structure{``structure''-highlighted text.} \alert{Alerted text.}
+  \begin{align*}
+    s o m e &= f o r m u l a\\
+     w i t h &=   a l i g n
+  \end{align*}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Bibliographies}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}
+%   \frametitle{\secname}
+%   \begin{thebibliography}{9}
+%     \setbeamertemplate{bibliography item}[mpi2015 online]
+%   \bibitem{A} ItemA
+%     \setbeamertemplate{bibliography item}[mpi2015 book]
+%   \bibitem{B} ItemB
+%     \setbeamertemplate{bibliography item}[mpi2015 article]
+%   \bibitem{C} ItemC
+%     \setbeamertemplate{bibliography item}[triangle]
+%   \bibitem{D} ItemD
+%     \setbeamertemplate{bibliography item}[text]
+%   \bibitem{E} ItemE
+%   \end{thebibliography}
+% \end{frame}
+
+\frame{
+\frametitle{Thank you!}
+\vfill ~ \vfill ~ \vfill ~ \vfill ~ \vfill
+\begin{center}
+	\begin{huge}
+		Thank you for your attention!\\[.1in]
+	\end{huge}
+	I am always open for discussion
+\end{center}
+\vfill ~ \vfill ~ \vfill
+\begin{flushright}
+	\begin{small}
+		%\texttt{
+		\href{mailto:heiland@mpi-magdeburg.mpg.de}{heiland@mpi-magdeburg.mpg.de}\\
+		\href{https://www.janheiland.de}{www.janheiland.de}\\
+		\href{https://www.github.com/highlando}{github.com/highlando}
+		%}
+		\end{small}
+\end{flushright}
+}
+\end{document}
